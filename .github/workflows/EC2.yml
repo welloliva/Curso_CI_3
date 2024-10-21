@@ -27,9 +27,9 @@ jobs:
       run: echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\n' | head -c 100
 
     - name: Executing remote SSH commands using password
-      uses: appleboy/ssh-action@master
+      uses: appleboy/ssh-action@v0.1.0
       with:
-        host: 52.14.149.222
+        host: ${{ secrets.HOST }}
         username: ${{ secrets.REMOTE_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: 22
@@ -41,4 +41,6 @@ jobs:
           export DBPORT=5432
           export PORT=8000
           chmod +x main
+          chmod 600 /path/to/private_key
+          ssh -i /path/to/private_key ec2-user@52.14.149.222
           nohup ./main > nohup.out 2> nohup.err < /dev/null &
