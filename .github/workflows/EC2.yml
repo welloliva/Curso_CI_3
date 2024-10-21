@@ -31,11 +31,11 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: 22
         script: |
-          export HOST=${{ secrets.DBHOST }}
-          export USER=${{ secrets.DBUSER }}
-          export PASSWORD=${{ secrets.DBPASSWORD }}
-          export DBNAME=${{ secrets.DBNAME }}
-          export DBPORT=${{ secrets.DBPORT }}
+          export HOST=api-go-dev.ctg2yc0kmgi3.us-east-2.rds.amazonaws.com
+          export USER=ec2-user
+          export PASSWORD=123456789
+          export DBNAME=root
+          export DBPORT=5432
           export PORT=8000
           chmod +x main
           nohup ./main > nohup.out 2> nohup.err < /dev/null &
