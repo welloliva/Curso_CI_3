@@ -22,6 +22,9 @@ jobs:
         REMOTE_USER: ec2-user
         TARGET: /home/ec2-user
         EXCLUDE: "postgres-data"
+        
+    - name: Debugging SSH key
+      run: echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\n' | head -c 100
 
     - name: Executing remote SSH commands using password
       uses: appleboy/ssh-action@master
