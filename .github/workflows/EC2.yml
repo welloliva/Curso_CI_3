@@ -32,8 +32,9 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: 22
         script: |
-          export HOST=${{ secrets.HOST }}
+          export HOST=${{ secrets.DBHOST }}
           export USER=${{ secrets.DBUSER }}
-          export PASSWORD=${{ secrets.REMOTE_PASSOWRD }}
-          export DBNAME=${{ secrets.REMOTE_DBNAME }}
-          export PORT=${{ secrets.REMOTE_PORT }}
+          export PASSWORD=${{ secrets.DBPASSOWRD }}
+          export DBNAME=${{ secrets.DBNAME }}
+          export DBPORT=${{ secrets.DBPORT }}
+          export PORT=8000
