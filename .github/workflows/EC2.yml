@@ -17,33 +17,7 @@ jobs:
     - name: Deploy to Staging server
       uses: easingthemes/ssh-deploy@main
       with:
-        SSH_PRIVATE_KEY: -----BEGIN RSA PRIVATE KEY-----
-                          MIIEowIBAAKCAQEAuMNqFMxiIVVO+YiyfXhiF/lvyWR7bbiyaJ4NAoGfqtOWkjiS
-                          wlVa71xchZAZwv1X6YknM8ML2C9IwGQbTKL+RKS+wlyMmMePOY9kszzx26p0k+1Z
-                          YrntDREL0/8BJ0JATHz3zanhgtPOxQ73DEtElCx+ErE/AxDqXpDIxbCEUnxpDk51
-                          64MfCSq9UbQkKtbSA66dnVoJ9EjE3RQHTNZzpxm8VAHzZEEtp+vhzdbi8+0xpiV9
-                          5R6TeVUVf7JNqTJvVqthvhSQA645k+vjSG4dhvKLnmufyo3eHAQP9EybvzCvG5wo
-                          1grrF0wssQN/0G307mgejPwOokzXABjQijzVJwIDAQABAoIBAElBMU4Nutp8eFN3
-                          X01f7YST4T54GHfoQtQ31fCodCXGvmw7AfUK4oMEm6pY993XlIODXYeoTYnpNW8S
-                          QcCg3y9YIkntZ9ErTh4EPGjUQRBXBOGhuU7raJFFsOrcsBhgrB2nbpicQk0crV50
-                          EH9PWGFnQpUmsVUF3+aegPvggJYzEHc8XNau13RITyvp6ApO4Xr/3dyL6sLDRJRz
-                          SYqa9oPvL4WfJ7onbW46A8TFsxgwVOAw6Yi2zS2kUHGgCQhP3aEgZV8FZVRmZDAI
-                          yVUj8R7gki3/hpQ785xcajH+KcCjigz11qGVCINL4Q0WkUilWO3cFvE2Sli7UU/M
-                          ORxUsAECgYEA6zVU0A1JZJ3gGHHsYSJ7MubqbQLquJbyphuCtkkQrMKbYAMmHIFq
-                          ygx+9eDqBC8WVw7suj4k+fohW+0ezk+wHvCgKpStCVI3qhFWPX80OhK8sGBdaW0m
-                          nAsa5C8SH8YHTxwQNH1BX8+tZbCt0cayLLafu387/w9FMLnBP6ho8dcCgYEAyRiI
-                          lUlNc3POZKzGTd4zd0p3pjwSjmHtYLq2ORMtLLxl5J+IKTzbCx4whwz9WCtEwTTM
-                          2IXeRUaYoWVUfvO/GlHiy/mxQbXC7d7UxGNDSPGDj28QN25nLkecLiaQmFwGlwIR
-                          6MQuBBqmncUldZy9+TX/08om4gb+aF9F0rCCbTECgYAibqo90tQdsKbvrS3Hgn66
-                          kudakgS+hQp8mqZl/Qg94jdQtOVNYvy5G18yq3xWpHYGxJ6PHS3Ykm9zv6C03yGP
-                          RfaMhTtXk/umH+eaFRcWMUwCHflOx7XRPibvpJxonlrPj/InXPbHCeX+bwDjJs1K
-                          kmmLzzJ/QkMEwQyzPvot/QKBgBHkW+qkbf6ytA9jC/XLqlqXxpOEzsXaUquDkUj8
-                          us07KfmwdAXvQzH3CqxJbJUWrHRgRUWSi5cwU84wXNc6yqsF1B7/5VSKXoCZjea3
-                          SjpIOsNdR10XNpj4iB3XEpBrx65R4dQK+GknEeIBs3aGbqSouE1YtCLyKlqQ935q
-                          dABRAoGBAJzX18LEjPKK8+ce4js6SXLuZd8mb3UbKWRBoNSECPaR0PiYPqXDhl5W
-                          IrLB4hbYhbidomhMHBM46s0ZtD1ZZbVFUa3lx0XqZVpXp/77JlLFE8MSNyIwtEGW
-                          +O4+ruu8CsXyXMtm5NpyJlS5o07uAykAQfy9ALxzKlS3qv14aT1W
-                          -----END RSA PRIVATE KEY-----
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         REMOTE_HOST: 52.14.149.222
         REMOTE_USER: ec2-user
         TARGET: /home/ec2-user
