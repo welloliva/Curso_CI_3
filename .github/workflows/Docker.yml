@@ -24,7 +24,7 @@ jobs:
         password: ${{ secrets.PASSWORD_DOCKER_HUB }}
         
     - name: Set up Docker Compose
-      uses: docker/compose-action@v2.0.0
+      uses: docker/setup-compose-action@v2
 
     - name: Verify Docker Compose installation
       run: docker-compose --version
