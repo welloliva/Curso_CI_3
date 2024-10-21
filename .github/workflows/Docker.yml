@@ -20,7 +20,7 @@ jobs:
     - name: Docker Login
       uses: docker/login-action@v2.0.0
       with:
-        username: leonardosartorello
+        username: welloliva
         password: ${{ secrets.PASSWORD_DOCKER_HUB }}
         
     - name: Set up Docker Compose
